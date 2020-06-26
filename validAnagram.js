@@ -4,34 +4,62 @@
  formed from iceman.
  */
 
- function validAnagram(str1, str2) {
-   // return false if length isnt the same
-   if (str1.length !== str2.length) {
-     return false;
-   }
+ // Time Complexity O(n);
+ // Solition 1
 
-   let obj1 = {};
-   let obj2 = {};
-
-   for (let val of str1) {
-     obj1[val] = ++obj1[val] || 1;
-   }
-
-   for (let val of str2) {
-     obj2[val] = ++obj2[val] || 1;
-   }
-   
-   for (let key in obj1) {
-    if (!(key in obj2)) {
+ /** 
+  function validAnagram(str1, str2) {
+    // return false if length isnt the same
+    if (str1.length !== str2.length) {
       return false;
     }
-    if (obj2[key] !== obj1[key]) {
+ 
+    let obj1 = {};
+    let obj2 = {};
+ 
+    for (let val of str1) {
+      obj1[val] = ++obj1[val] || 1;
+    }
+ 
+    for (let val of str2) {
+      obj2[val] = ++obj2[val] || 1;
+    }
+    
+    for (let key in obj1) {
+     if (!(key in obj2)) {
+       return false;
+     }
+     if (obj2[key] !== obj1[key]) {
+       return false;
+     }
+   }
+   return true;
+  }
+ 
+ */
+
+function validAnagram(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  const lookup = {};
+
+  for (let i = 0; i < str1.length; i++) {
+    let letter = str1[i];
+    lookup[letter] ? lookup[letter]++ : lookup[letter] = 1;
+  }
+
+  for (let i = 0; i < str2.length; i++) {
+    let letter = str2[i];
+
+    if (!lookup[letter]) {
       return false;
+    } else {
+      lookup[letter] -= 1;
     }
   }
   return true;
- }
-
+}
 
  console.log(validAnagram("","")) //true
  console.log(validAnagram("aaz","zza")) //false
