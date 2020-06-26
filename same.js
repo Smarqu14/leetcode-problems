@@ -1,4 +1,7 @@
 /**
+ Naive Approach
+
+ 
  Write a function called same, whoch accepts two arrays/ The function should return true if every value
  in the array has its corresponding value squared int he second array. The frequency of values must be the same.
 
@@ -6,6 +9,14 @@ i: two arrays
 o: boolean, if second array contains values from first array squared
 C: none
 e: none
+
+
+
+TIME COMPLEXITY: 
+O(N^2); we are looping and we also have a nested loop (indexOf)
+
+
+
  */
 
 function same(arr1, arr2) {
