@@ -38,7 +38,7 @@
  
  */
 
- // Solution 2b
+ // Solution 2
 
 function validAnagram(str1, str2) {
   if (str1.length !== str2.length) {
