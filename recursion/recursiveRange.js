@@ -24,7 +24,12 @@ function recursiveRange(num) {
 
   return sum + recursiveRange(num - 1);
 }
-
 console.log(recursiveRange(6)); // 21
-// 1 + 2 + 3 + 4 + 5 + 6;
 console.log(recursiveRange(10)); // 55
+
+/*
+function recursiveRange(x){
+  if (x === 0 ) return 0;
+  return x + recursiveRange(x-1);
+}
+*/
