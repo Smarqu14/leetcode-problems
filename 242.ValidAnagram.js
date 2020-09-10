@@ -20,7 +20,6 @@ var isAnagram = function (s, t) {
   }
 
   let obj1 = {};
-  let obj2 = {};
 
   for (let i = 0; i < s.length; i++) {
     if (obj1[s[i]] === undefined) {
@@ -31,12 +30,10 @@ var isAnagram = function (s, t) {
   }
 
   for (let i = 0; i < t.length; i++) {
-    let letter = t[i];
-
-    if (!obj1[letter]) {
+    if (!obj1[t[i]]) {
       return false;
     } else {
-      obj1[letter] -= 1;
+      obj1[t[i]] -= 1;
     }
   }
   return true;
