@@ -14,8 +14,7 @@
 // Input: n = 10, pick = 6
 // Output: 6
 
-
-/** 
+/**
  * Forward declaration of guess API.
  *  your guess
  * 	            -1 if num is lower than the guess number
@@ -27,19 +26,19 @@
 /**
  */
 
-var guessNumber = function(n) {
+var guessNumber = function (n) {
   let start = 0;
   let end = n;
-  let mid = Math.floor((n / 2));
-  
+  let mid = Math.floor(1 + n / 2);
+
   while (guess(mid) !== 0) {
-     if (guess(mid) === 1) {
-          start = mid;
-          mid = Math.ceil((start + end)/2);
-      } else if (guess(mid) === -1) {
-          end = mid;
-          mid = Math.floor((start + end)/2);
-      }    
+    if (guess(mid) === 1) {
+      start = mid;
+      mid = Math.ceil((start + end) / 2);
+    } else if (guess(mid) === -1) {
+      end = mid;
+      mid = Math.floor((start + end) / 2);
+    }
   }
   return mid;
-}
+};
