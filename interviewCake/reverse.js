@@ -6,8 +6,8 @@ function reverse(arrayOfChars) {
 
   while (leftIndex < rightIndex) {
     // Swap characters
-    console.log(leftIndex, "left");
-    console.log(rightIndex, "right");
+    // console.log(leftIndex, "left");
+    // console.log(rightIndex, "right");
 
     const temp = arrayOfChars[leftIndex];
     arrayOfChars[leftIndex] = arrayOfChars[rightIndex];
@@ -18,20 +18,10 @@ function reverse(arrayOfChars) {
     rightIndex--;
   }
 }
-reverse(['e','m','p','t','y' ,'s','t','r','i','n','g'])
-
-
+reverse(["e", "m", "p", "t", "y", "s", "t", "r", "i", "n", "g"]);
 
 // My solution
 function reverse(arrayOfChars) {
   // Reverse the input array of characters in place
-  return arrayOfChars.reverse().join('');
+  return arrayOfChars.reverse().join("");
 }
-
-
-
-
-
-
-
-
