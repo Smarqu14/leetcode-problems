@@ -22,4 +22,3 @@ var maximumProduct = function (nums) {
     sorted[sorted.length - 1] * sorted[sorted.length - 2] * sorted[0]
   );
 };
-
