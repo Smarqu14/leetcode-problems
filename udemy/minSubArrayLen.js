@@ -11,7 +11,7 @@ function minSubArrayLen(nums, sum) {
   let total = 0;
   let start = 0;
   let end = 0;
-  let minLen = Infinity;
+  let minLen = Number.MAX_SAFE_INTEGER;
  
   while (start < nums.length) {
     // if current window doesn't add up to the given sum then
@@ -33,7 +33,7 @@ function minSubArrayLen(nums, sum) {
     }
   }
 
-  return minLen === Infinity ? 0 : minLen;
+  return minLen === Number.MAX_SAFE_INTEGER ? 0 : minLen;
 }
 
 console.log(minSubArrayLen([2, 3, 1, 2, 4, 3], 7)); // 2 because [4, 3] is the smallest subarray
