@@ -56,7 +56,7 @@ var lengthOfLongestSubstring = function(s) {
 */
 
 function lengthOfLongestSubstring(str) {
-  if (str.length === 0 || s === null) return 0;
+  if (str.length === 0 || str === null) return 0;
 
   let set = new Set();
   let left = 0;
