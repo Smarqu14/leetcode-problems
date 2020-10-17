@@ -10,6 +10,4 @@ const factorial = (num) => {
 };
 // O(n)
 
-//O(logn)
-
 
