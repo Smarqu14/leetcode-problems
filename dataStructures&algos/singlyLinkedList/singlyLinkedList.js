@@ -19,7 +19,7 @@ class SinglyLinkedlist {
     // create a new node using the value passed to the function
     let node = new Node(val);
     //if there is no head property on the list, set the head and tail to be the newly created node
-      // this only runs if its empty
+    // this only runs if its empty
     if (!this.head) {
       this.head = node;
       this.tail = this.head;
